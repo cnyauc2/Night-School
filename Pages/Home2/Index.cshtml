@@ -1,0 +1,154 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+.modal-dialog {
+    height: 50%;
+    width: 50%;
+    margin: auto
+}
+
+.modal-header {
+    color: white;
+    background-color: #007bff
+}
+
+textarea {
+    border: none;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    outline: 0px !important
+}
+
+.openmodal {
+    margin-left: 35%;
+    width: 25%;
+    margin-top: 25%
+}
+
+.icon1 {
+    color: #007bff
+}
+
+a {
+    margin: auto
+}
+
+input {
+    color: #007bff
+} 
+.formthree {
+    background: #f7f7f7
+}
+
+.ptb-100 {
+    padding-top: 100px;
+    padding-bottom: 100px
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+.formthree .form-control {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 13px;
+    border-bottom: 1px solid #d3d3d3;
+    background: transparent;
+    font-family: 'Roboto'
+}
+
+form .btn {
+    border-radius: 0 !important
+}
+
+.formthree form button.btn {
+    margin: 30px auto;
+    display: block;
+    padding: 11px 32px;
+    background: #4285f4;
+    border: 1px solid #4285f4;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s
+}
+
+.formthree .btn-primary.focus,
+.formthree .btn-primary:hover {
+    background-color: transparent;
+    color: #4285f4;
+    border: 1px solid #4285f4 !important
+}
+</style>
+
+<body>
+    
+<!--Modal Launch Button-->
+<button type="button" class="btn btn-info btn-lg openmodal" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<!--Division for Modal-->
+<div id="myModal" class="modal fade" role="dialog">
+    <!--Modal-->
+    <div class="modal-dialog">
+        <!--Modal Content-->
+        <div class="modal-content">
+            <!-- Modal Header-->
+            <div class="modal-header">
+                <h3>Feedback Request</h3>
+                <!--Close/Cross Button--> <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+            </div> <!-- Modal Body-->
+            <div class="modal-body text-center"> <i class="far fa-file-alt fa-4x mb-3 animated rotateIn icon1"></i>
+                <h3>Your opinion matters</h3>
+                <h5>Help us improve our product? <strong>Give us your feedback.</strong></h5>
+                <hr>
+                <h6>Your Rating</h6>
+            </div> <!-- Radio Buttons for Rating-->
+            <div class="form-check mb-4"> <input name="feedback" type="radio"> <label class="ml-3">Very good</label> </div>
+            <div class="form-check mb-4"> <input name="feedback" type="radio"> <label class="ml-3">Good</label> </div>
+            <div class="form-check mb-4"> <input name="feedback" type="radio"> <label class="ml-3">Mediocre</label> </div>
+            <div class="form-check mb-4"> <input name="feedback" type="radio"> <label class="ml-3">Bad</label> </div>
+            <div class="form-check mb-4"> <input name="feedback" type="radio"> <label class="ml-3">Very Bad</label> </div>
+            <!--Text Message-->
+            <div class="text-center">
+                <h4>What could we improve?</h4>
+            </div> <textarea type="textarea" placeholder="Your Message" rows="3"></textarea> <!-- Modal Footer-->
+            <div class="modal-footer"> <a href="" class="btn btn-primary">Send <i class="fa fa-paper-plane"></i> </a> <a href="" class="btn btn-outline-primary" data-dismiss="modal">Cancel</a> </div>
+        </div>
+    </div>
+</div>
+</br>
+</br>
+<div class="formthree ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group"> <label class="sr-only">Name</label> <input type="text" class="form-control" required="" id="nameSix" placeholder="Your Name"> </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group"> <label class="sr-only">Email</label> <input type="email" class="form-control" required="" id="emailSix" placeholder="Email Address"> </div>
+                        </div>
+                    </div>
+                    <!--end of /.row-->
+                    <div class="form-group"> <label class="sr-only">Message</label> <textarea class="form-control" required="" rows="7" placeholder="Write Message"></textarea> </div> <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div> <!-- /.col-md-8 -->
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+</div>
+</body>
+    

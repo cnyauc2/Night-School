@@ -1,0 +1,174 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    .mdi {
+    font-size: 50px
+}
+
+.padding {
+    padding: 8rem !important
+}
+body {
+    background-color: #f2f7fb
+}
+
+.login-block {
+    margin: 30px auto;
+    min-height: 93.6vh
+}
+
+.login-block .auth-box {
+    margin: 20px auto 0;
+    max-width: 569px !important
+}
+
+.contact-us {
+    font-size: 24px;
+    font-weight: 300
+}
+
+.respond {
+    font-size: 15px !important;
+    font-weight: 200;
+    margin-top: -6px
+}
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px 0 rgba(43, 43, 43, .1), 0 11px 6px -7px rgba(43, 43, 43, .1);
+    box-shadow: 0 0 5px 0 rgba(43, 43, 43, .1), 0 11px 6px -7px rgba(43, 43, 43, .1);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.card .card-block {
+    padding: 1.25rem
+}
+
+.f-56 {
+    font-size: 56px
+}
+
+.form-group {
+    margin-bottom: 1.25em
+}
+
+.form-material .form-control {
+    display: inline-block;
+    height: 43px;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc
+}
+
+.btn-md {
+    padding: 10px 16px;
+    font-size: 15px;
+    line-height: 23px
+}
+
+.btn-primary {
+    background-color: #4099ff;
+    border-color: #4099ff;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: all ease-in .3s;
+    transition: all ease-in .3s
+}
+
+.btn {
+    border-radius: 2px;
+    text-transform: capitalize;
+    font-size: 15px;
+    padding: 10px 19px;
+    cursor: pointer
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.btn-md {
+    padding: 10px 16px;
+    font-size: 15px;
+    line-height: 23px
+}
+</style>
+
+<body><div class="padding">
+    <div style="text-align: center"> <i class="mdi mdi-forum"></i> <br>
+        <h2 style="color: #666;">Contact Us</h2> <br>
+        <p class="text-center" style="color:#444;">Have any Questions? Feel free to contact our Tech Support</p> <br> <button type="submit" class="btn btn-outline-dark ml-sm-2 mb-2" style="border-radius: 50px" data-toggle="modal" data-target="#contact">&emsp;&emsp;Contact Support&emsp;&emsp;</button>
+    </div>
+    <!--Contact Modal-->
+    <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title text-light" id="exampleModalLabel">We would love to hear from you!!</h5> <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form my-3 mr-2 ml-2">
+                        <div class="form-row">
+                            <div class="form-group col-sm"> <label for="exampleInputEmail1" style="color: #fff;">Enter Name</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First"> </div>
+                            <div class="form-group col-sm"> <label class="sm-lbl" for="exampleInputEmail1" style="color:rgba(0, 0, 0, 0); visibility: hidden;">Enter Name</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last"> </div>
+                        </div>
+                        <div class="form-group"> <label for="exampleInputEmail1" style="color: #fff;">Enter Email</label> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=""> </div>
+                        <div class="form-group"> <label for="exampleFormControlTextarea1" style="color: #fff;">Your Query or Question</label> <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea> </div>
+                    </form>
+                </div>
+                <div class="modal-footer"> <button type="button" class="btn btn-outline-light ml-sm-2" style="border-radius: 50px; width:100%;" data-dismiss="modal" aria-label="Close">Submit</button> </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <section class="login-block">
+     <div class="container-fluid">
+         <div class="row">
+             <div class="col-sm-12">
+                 <form class="md-float-material form-material">
+                     <div class="auth-box card">
+                         <div class="card-block">
+                             <div class="row">
+                                 <div class="col-md-12">
+                                     <h3 class="text-center"><i class="fa fa-phone-square text-primary f-56"></i></h3>
+                                     <h3 class="text-center contact-us">Contact Us</h3>
+                                     <h6 class="text-center respond">(we generally respond in 24 hours)</h6>
+                                 </div>
+                             </div>
+                             <div class="row">
+                                 <div class="col-md-6">
+                                     <div class="form-group form-primary"> <input type="text" name="email" class="form-control text-left" placeholder="Name" required=""> </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                     <div class="form-group form-primary"> <input type="text" name="email" class="form-control text-left" placeholder="Email" required=""> </div>
+                                 </div>
+                             </div>
+                             <div class="form-group form-primary"> <input type="text" name="email" class="form-control text-left" placeholder="Message" required=""> </div>
+                             <div class="row">
+                                 <div class="col-md-12">
+                                     <button type="button" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20"><i class="fa fa-phone"></i> Contact Now </button>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </form>
+             </div>
+         </div>
+     </div>
+ </section>
+</body>
